@@ -3,8 +3,8 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) throws InterruptedException {
-        for (int i = 1; i < 6; i++) {
-            Runner runner = new Runner("Runner" + i);
+        for (int i = 1; i < 5; i++) {
+            Runner runner = new Runner("Runner " + i);
             runner.setRunnerNumber(i + 1);
             runner.start();
             runner.join();
@@ -14,8 +14,6 @@ public class Main {
             runner1.setRunnerNumber(i-1);
             runner1.start();
             runner1.join();
-            System.out.println("Runner 1 берет палочку");
-
         }
     }
 }
